@@ -1,0 +1,192 @@
+
+/* General page styling */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f5f9;
+    color: #25283d;
+}
+
+/* Main dashboard layout */
+.dashboard {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 230px;
+    background-color: #25283d;
+    color: white;
+    padding: 25px 20px;
+}
+
+.logo {
+    margin-bottom: 40px;
+    color: #b8a1ff;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar li {
+    margin-bottom: 20px;
+}
+
+.sidebar a {
+    color: white;
+    text-decoration: none;
+}
+
+.sidebar a:hover {
+    color: #b8a1ff;
+}
+
+/* Main content */
+.main-content {
+    flex: 1;
+    padding: 30px;
+    min-width: 0;
+}
+
+/* Top header */
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 35px;
+}
+
+.topbar h1 {
+    margin-bottom: 5px;
+}
+
+.topbar p {
+    color: #777b8c;
+}
+
+/* Profile */
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #b8a1ff;
+    color: #25283d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+/* Section headings */
+section {
+    margin-bottom: 35px;
+}
+
+section h2 {
+    margin-bottom: 20px;
+}
+
+/* Statistics cards */
+.stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.stat-card,
+.content-card {
+    background-color: white;
+    padding: 22px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.stat-card h3 {
+    font-size: 15px;
+    color: #777b8c;
+}
+
+.stat-number {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.stat-change {
+    color: #26845b;
+    font-size: 14px;
+}
+
+/* Campaign link */
+.campaign-link {
+    display: inline-block;
+    background-color: #6c4ce3;
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 6px;
+    margin-top: 10px;
+}
+
+.campaign-link:hover {
+    background-color: #5234c4;
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 170px;
+        padding: 20px 12px;
+    }
+
+    .main-content {
+        padding: 20px;
+    }
+
+    .stats {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 500px) {
+    .dashboard {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+    }
+
+    .logo {
+        margin-bottom: 20px;
+    }
+
+    .sidebar ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .sidebar li {
+        margin-bottom: 5px;
+    }
+
+    .topbar {
+        align-items: flex-start;
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+}
